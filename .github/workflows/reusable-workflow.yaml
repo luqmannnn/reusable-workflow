@@ -17,7 +17,7 @@ on:
         required: true
 
 jobs:
-  triage:
+  shared-workflow-called:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
