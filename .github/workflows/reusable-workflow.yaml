@@ -6,6 +6,12 @@ on:
       user-name:
         required: true
         type: string
+      address:
+        required: true
+        type: string
+      age:
+        required: true
+        type: string
     secrets:
       token:
         required: true
@@ -17,4 +23,7 @@ jobs:
     - uses: actions/checkout@master
     
     - name: Print variables
-      run: echo ${{ inputs.user-name }}
+      run: |
+        echo "User name: ${{ inputs.user-name }}"
+        echo "Address: ${{ inputs.address }}"
+        echo "Age: ${{ inputs.age }}"
